@@ -40,7 +40,7 @@
   - pip install pymysql
   - pip install flask-sqlalchemy
 
-- 连接mysql
+### 连接mysql
 
 create user root@'%' identified by 'htl';
 
@@ -60,3 +60,14 @@ password = lu9Z1BYuphIxE0Pp
 
 
 ALTER user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'htl';
+
+
+- 1.安装mysql：apt install mysql server
+- 2.修改root密码
+- 3.alter user ‘root’@’localhost’ identified with mysql_native_password by 'htl';
+- 4.找到bind-adderss = 127.0.0.1这行并注释掉:sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+- 5.重启服务：sudo service mysql restart
+
+
+vim /etc/ssh/sshd_config
+systemctl restart sshd
